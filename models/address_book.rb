@@ -8,7 +8,7 @@ class AddressBook
     end
 
     def add_entry(name, phone_number, email)
-        
+
         index = 0
         @entries.each do |entry|
 
@@ -18,7 +18,7 @@ class AddressBook
             index += 1
         end
 
-        @entries.insert (index, Entry.new(name, phone_number, email))
+        @entries.insert(index, Entry.new(name, phone_number, email))
     end
 
 end
