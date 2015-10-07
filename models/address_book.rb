@@ -2,6 +2,12 @@ require_relative 'entry'
 
 class AddressBook
     attr_accessor :entries
+    
+    # Search AddressBook for a specific entry by name
+   def binary_search(name)
+     return nil
+   end
+
 
     def initialize
         @entries = []
@@ -20,5 +26,6 @@ class AddressBook
 
         @entries.insert(index, Entry.new(name, phone_number, email))
     end
+
 
 end
