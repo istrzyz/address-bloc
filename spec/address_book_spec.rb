@@ -168,7 +168,7 @@ end
 
       describe "#iterative_search" do
         it "searches AddressBook for a non-existent entry" do
-          book.import_fromcsv("entries.csv")
+          book.import_from_csv("entries.csv")
           entry = book.iterative_search("Dan")
           expect(entry).to be_nil
         end
