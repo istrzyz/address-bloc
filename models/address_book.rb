@@ -8,6 +8,8 @@ require "csv"
      @entries = []
    end
 
+
+
    def end_it_all
      @entries = []
    end
