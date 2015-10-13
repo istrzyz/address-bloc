@@ -17,6 +17,7 @@ class MenuController
     puts "4 - View Entry Number"
     puts "5 - Import entries from a CSV"
     puts "6 - Exit"
+    puts "7 - End it all"
     print "Enter your selection: "
 
 # #3
@@ -44,6 +45,9 @@ class MenuController
          main_menu
        when 6
          puts "Good-bye!"
+       when 7
+         system "clear"
+         main_menu
    # #8
          exit(0)
    # #9
@@ -103,7 +107,7 @@ class MenuController
 
      def search_submenu(entry)
 # #12
-    puts "\nd - delete entry"
+    puts "d - delete entry"
     puts "e - edit this entry"
     puts "m - return to main menu"
 # #13

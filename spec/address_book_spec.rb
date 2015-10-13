@@ -10,6 +10,15 @@ RSpec.describe AddressBook do
    expect(entry.email).to eql expected_email
  end
 
+describe "#end_it_all" do
+  "It should remove everything" do
+    book.add_entry("L","4444444444","l@yahoo.com")
+    book.add_entry("B","5555555555","b@yahoo.com")
+
+    book.end_it_all
+    expect(book.entries.size).to eq 0
+end
+
 # #2
 describe "attributes" do
   it "should respond to entries" do
@@ -179,6 +188,7 @@ end
            expect(entry).to be_a Entry
            check_entry(entry, "Bill", "555-555-4854", "bill@blocmail.com")
          end
+
         it "searches AddressBook for Bob" do
            book.import_from_csv("entries.csv")
            entry = book.iterative_search("Bob")
@@ -186,7 +196,7 @@ end
            check_entry(entry, "Bob", "555-555-5415", "bob@blocmail.com")
          end
 
-         it "searches AddressBook for Joe" do
+        it "searches AddressBook for Joe" do
            book.import_from_csv("entries.csv")
            entry = book.iterative_search("Joe")
            expect(entry).to be_a Entry
