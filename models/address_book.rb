@@ -8,6 +8,13 @@ require "csv"
      @entries = []
    end
 
+
+
+   def end_it_all
+     @entries = []
+   end
+
+
    def add_entry(name, phone, email)
      index = 0
      @entries.each do |entry|
@@ -56,7 +63,7 @@ require "csv"
        end
 
        return nil
-       
+
      end
    end
  end
